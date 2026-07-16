@@ -783,7 +783,7 @@ function renderTIDP(){
   const issued=rows.filter(r=>['Issued','Issued On Time','Issued Late'].includes(r.status));
   const future=rows.filter(r=>r.status==='Future-Dated');
   const required=rows.filter(r=>r.requiredDate);
-  const typeCounts={2D:0,3D:0,Unclassified:0};
+  const typeCounts={'2D':0,'3D':0,Unclassified:0};
   deliverables.forEach(r=>typeCounts[r.deliveryType]=(typeCounts[r.deliveryType]||0)+1);
 
   const selectedNote=selected==='All'
